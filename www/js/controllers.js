@@ -46,7 +46,7 @@ controllers.controller('MetersController', ['$rootScope','$scope', '$http',
 					for (var key in data['probe.data']) {
 						var o = {
 							key: key,
-							value: data['probe.data'][key]
+							value: data['probe.data'][key].toFixed(2);
 						};
 
 						m.push(o);
