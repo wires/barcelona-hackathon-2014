@@ -1,7 +1,6 @@
 @import "compass/css3/border-radius"
 
 section#meters
-
   h3
     text-align: center
     margin-bottom: 30px
@@ -34,24 +33,4 @@ section#meters
           bottom: $height/3
 
   #store-button
-    text-align: center
-    background: $main-color
-    padding: 16px 8px
-    display: block
-    width: 50px
-    margin: auto
-    text-transform: uppercase
-    font-weight: bold
-    text-decoration: none
-    color: white
-    margin-top: 30px
-    &:hover
-      background: darken($main-color, 15)
-    +breakpoint
-      position: fixed
-      bottom: 0
-      width: 100%
-      margin: 0
-
-
-
+    +button

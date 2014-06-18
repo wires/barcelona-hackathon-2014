@@ -1,7 +1,10 @@
 <section id="settings">
+  <h3>Settings</h3>
 
+  <div id='ip-form'>
     <p>Please enter your Smartbottle IP address</p>
-    <input ng-model="smartbottle.address" placeholder='192.168.0.122'></input>
+    <input ng-model="smartbottle.address" placeholder='192.168.0.122' onfocus="this.placeholder = ''" onblur="this.placeholder = '192.168.0.122'" maxLength='15'></input>
+  </div>
 
     <a href="#" id="store-button">Save</a>
 </section>
