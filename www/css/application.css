@@ -251,6 +251,7 @@ section#meters #store-button:hover {
 @media only screen and (max-width: 40em) {
   /* line 35, ../../sass/sections/_meters.sass */
   section#meters #store-button {
+    padding: 16px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -303,6 +304,7 @@ section#settings #store-button:hover {
 @media only screen and (max-width: 40em) {
   /* line 19, ../../sass/sections/_settings.sass */
   section#settings #store-button {
+    padding: 16px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
