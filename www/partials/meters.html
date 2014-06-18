@@ -1,15 +1,16 @@
 <section id="meters">
-  <h3>Measured data</h3>
+  <h3 ng-show="!connecting">Measured data</h3>
 
-  <div id="location">
-  </div>
+  <p ng-show="connecting">Connecting to Smartbottle
+      <span class="address">({{smartbottle.address}})</span>
+  </p>
 
-  <ul id='measures'>
+  <ul ng-show="!connecting" id='measures'>
     <li ng-repeat='measurement in measurements'>
       <span class='value'>{{measurement.value}}</span>
       <span class='key'>{{measurement.key}}</span>
     </li>
   </ul>
 
-  <a ng-click="saveMeasurement()" id="store-button">Save</a>
+  <a ng-click="saveMeasurements()" id="store-button">Save</a>
 </section>
