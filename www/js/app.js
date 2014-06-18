@@ -3,6 +3,10 @@ var demoApp = angular.module('demoApp',['ngRoute', 'demoControllers']);
 
 demoApp.config(function($routeProvider){
     $routeProvider
+        .when('/meters', {
+            controller: 'UsersController',
+            templateUrl: 'partials/meters.html'
+        })
         .when('/users', {
             controller: 'UsersController',
             templateUrl: 'partials/users.html'
