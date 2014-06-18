@@ -20,6 +20,6 @@ demoApp.config(function($routeProvider){
             templateUrl: 'partials/checks.html'
         })
         .otherwise({
-            redirectTo:'/users'
+            redirectTo:'/meters'
         });
 });
