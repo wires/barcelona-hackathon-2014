@@ -1,6 +1,6 @@
 section#settings
-  #ip-form
-    +container
+  +container
+  // #ip-form
 
   text-align: center
 
@@ -16,6 +16,8 @@ section#settings
     border-bottom: 1px solid #ccc
     &:focus
       border-bottom: 1px solid $main-color
+    +breakpoint
+      font-size: 18px
 
   #store-button
     +button

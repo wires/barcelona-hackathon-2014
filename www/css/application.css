@@ -192,22 +192,28 @@ h3 {
   color: #8ce7ed;
 }
 
-/* line 4, ../../sass/sections/_meters.sass */
+/* line 3, ../../sass/sections/_meters.sass */
+section#meters {
+  width: 80%;
+  margin: 0 10%;
+  margin-left: 50px;
+}
+/* line 5, ../../sass/sections/_meters.sass */
 section#meters h3 {
   text-align: center;
   margin-bottom: 30px;
 }
-/* line 8, ../../sass/sections/_meters.sass */
+/* line 9, ../../sass/sections/_meters.sass */
 section#meters p {
   width: 80%;
   margin: 0 10%;
-  margin-left: 65px;
+  margin-left: 50px;
 }
-/* line 11, ../../sass/sections/_meters.sass */
+/* line 12, ../../sass/sections/_meters.sass */
 section#meters #measures {
   text-align: center;
 }
-/* line 14, ../../sass/sections/_meters.sass */
+/* line 15, ../../sass/sections/_meters.sass */
 section#meters #measures li {
   vertical-align: top;
   display: inline-block;
@@ -215,11 +221,11 @@ section#meters #measures li {
   width: 15%;
   margin: 0 5% 0 4%;
 }
-/* line 20, ../../sass/sections/_meters.sass */
+/* line 21, ../../sass/sections/_meters.sass */
 section#meters #measures li span {
   margin: auto;
 }
-/* line 22, ../../sass/sections/_meters.sass */
+/* line 23, ../../sass/sections/_meters.sass */
 section#meters #measures li .value {
   font-weight: bold;
   color: white;
@@ -234,19 +240,19 @@ section#meters #measures li .value {
   -o-border-radius: 120px;
   border-radius: 120px;
 }
-/* line 31, ../../sass/sections/_meters.sass */
+/* line 32, ../../sass/sections/_meters.sass */
 section#meters #measures li .key {
   line-height: 30px;
 }
 @media only screen and (max-width: 40em) {
-  /* line 14, ../../sass/sections/_meters.sass */
+  /* line 15, ../../sass/sections/_meters.sass */
   section#meters #measures li {
-    width: 39%;
-    margin: 0 5% 0 4%;
+    width: 80%;
+    margin: 0 auto;
     margin-bottom: 40px;
   }
 }
-/* line 38, ../../sass/sections/_meters.sass */
+/* line 39, ../../sass/sections/_meters.sass */
 section#meters #store-button {
   text-align: center;
   background: #8ce7ed;
@@ -265,7 +271,7 @@ section#meters #store-button:hover {
   background: #4ad9e3;
 }
 @media only screen and (max-width: 40em) {
-  /* line 38, ../../sass/sections/_meters.sass */
+  /* line 39, ../../sass/sections/_meters.sass */
   section#meters #store-button {
     padding: 16px 0;
     position: fixed;
@@ -273,18 +279,17 @@ section#meters #store-button:hover {
     width: 100%;
     margin: 0;
     z-index: -1;
+    text-align: center;
+    margin-left: -30px;
   }
 }
 
 /* line 1, ../../sass/sections/_settings.sass */
 section#settings {
-  text-align: center;
-}
-/* line 2, ../../sass/sections/_settings.sass */
-section#settings #ip-form {
   width: 80%;
   margin: 0 10%;
-  margin-left: 65px;
+  margin-left: 50px;
+  text-align: center;
 }
 /* line 7, ../../sass/sections/_settings.sass */
 section#settings input {
@@ -302,7 +307,13 @@ section#settings input {
 section#settings input:focus {
   border-bottom: 1px solid #8ce7ed;
 }
-/* line 20, ../../sass/sections/_settings.sass */
+@media only screen and (max-width: 40em) {
+  /* line 7, ../../sass/sections/_settings.sass */
+  section#settings input {
+    font-size: 18px;
+  }
+}
+/* line 22, ../../sass/sections/_settings.sass */
 section#settings #store-button {
   text-align: center;
   background: #8ce7ed;
@@ -321,7 +332,7 @@ section#settings #store-button:hover {
   background: #4ad9e3;
 }
 @media only screen and (max-width: 40em) {
-  /* line 20, ../../sass/sections/_settings.sass */
+  /* line 22, ../../sass/sections/_settings.sass */
   section#settings #store-button {
     padding: 16px 0;
     position: fixed;
@@ -329,5 +340,7 @@ section#settings #store-button:hover {
     width: 100%;
     margin: 0;
     z-index: -1;
+    text-align: center;
+    margin-left: -30px;
   }
 }
