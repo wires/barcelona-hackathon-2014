@@ -1,15 +1,29 @@
+@import "compass/css3/border-radius"
+
 section#meters
   +container
 
+  h3
+    text-align: center
+    margin-bottom: 30px
+
   #measures
     li
-      height: 75px
-      line-height: 75px
+      vertical-align: top
       display: inline-block
       width: 39%
       margin: 0 5%
       text-align: center
-      border: 1px solid #ccc
+      span
+        margin: auto
+      .value
+        $height: 120px
+        line-height: $height
+        display: block
+        height: $height
+        width: $height
+        background: #ccc
+        +border-radius($height)
       +breakpoint
         width: 80%
         margin: 0 10%

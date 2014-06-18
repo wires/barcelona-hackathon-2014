@@ -15,7 +15,7 @@ var javascripts = [
 gulp.task('sass', function(){
 	return gulp.src('sass/application.scss')
 		.pipe($.rubySass())
-		.pipe(gulp.dest(build_dir + 'application.css'));
+		.pipe(gulp.dest(build_dir));
 })
 
 gulp.task('javascript', function(){

@@ -20,6 +20,9 @@ function uptime(count, interval) {
     return ((count * interval) / (60*60*24))
 }
 
+controllers.controller('MetersController', ['$scope', '$http',
+]);
+
 controllers.controller('UsersController', ['$scope', '$http',
     function($scope, $http) {
 
