@@ -20,8 +20,8 @@ gulp.task('sass', function(){
 
 gulp.task('javascript', function(){
 	return gulp.src(javascripts)
-		.pipe($.concat())
-		.pipe(gulp.dest(build_dir + 'application.js'));
+		.pipe($.concat('application.js'))
+		.pipe(gulp.dest(build_dir));
 })
 
 gulp.task('develop', function () {
