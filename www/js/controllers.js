@@ -31,14 +31,26 @@ controllers.controller('MetersController', ['$rootScope','$scope', '$http',
 
 		$scope.measurements = [];
 		$scope.connecting = true;
-		$scope.connected = false;
 
 		function read_sensor() {
-			var url = $rootScope.smartbottle.address + '/measurements';
-			$http.get(url).then(function(response) {
-				console.log('response ' + response.data);
-			});
+			console.log('attempting to get measurement');
+			var url = 'http://' + $rootScope.smartbottle.address + '/measurements';
+			$http({method: 'GET', url: url}).
+				success(function(data, status, headers, config, statusText) {
+					$scope.connecting = false;
+					$scope.error = undefined;
+					$scope.status = undefined;
+					console.log(data);
+				}).
+				error(function(data, status, headers, config, statusText) {
+					$scope.connecting = true;
+					$scope.error = data
+					$scope.status = statusText;
+				});
+
 		}
+
+		setInterval(read_sensor, 3000);
 
 		$scope.saveMeasurements = function() {
 			console.log('saving ', $rootScope.smartbottle, $scope.measurements);

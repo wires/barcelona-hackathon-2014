@@ -3,7 +3,7 @@ var demoApp = angular.module('demoApp',['ngRoute', 'demoControllers']);
 
 demoApp.run(function($rootScope){
 	$rootScope.smartbottle = {
-		address: '127.0.0.1'
+		address: '192.168.0.112'
 	};
 	$rootScope.active = 'meters'
 	$rootScope.showingMenu = false;

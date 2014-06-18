@@ -12,5 +12,8 @@
     </li>
   </ul>
 
-  <a ng-click="saveMeasurements()" id="store-button">Save</a>
+    <p ng-show="status" class="http-status">{{status}}</p>
+    <p ng-show="error" class="error">{{error}}</p>
+
+  <a ng-click="saveMeasurements()" id="store-button">Upload</a>
 </section>
