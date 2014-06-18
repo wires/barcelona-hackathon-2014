@@ -16,11 +16,15 @@ function humanize(nr)
     return nr.toFixed(0);
 }
 
-function uptime(count, interval) {
-    return ((count * interval) / (60*60*24))
-}
-
 controllers.controller('MetersController', ['$scope', '$http',
+	function($scope, $http){
+
+		$http.get('')
+			.then(function(result){
+
+			});
+
+	}
 ]);
 
 controllers.controller('UsersController', ['$scope', '$http',
