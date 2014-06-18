@@ -7,13 +7,12 @@
 
   <ul ng-show="!connecting" id='measures'>
     <li ng-repeat='measurement in measurements'>
-      <span class='value'>{{measurement.value}}</span>
+      <span class='value'>{{measurement.value | limitTo: 5}}</span>
       <span class='key'>{{measurement.key}}</span>
     </li>
   </ul>
 
-    <p ng-show="status" class="http-status">{{status}}</p>
-    <p ng-show="error" class="error">{{error}}</p>
+    <p class="status">{{status}}</p>
 
-  <a ng-click="saveMeasurements()" id="store-button">Upload</a>
+    <a ng-click="saveMeasurements()" id="store-button">Start Measuring</a>
 </section>

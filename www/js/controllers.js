@@ -30,30 +30,38 @@ controllers.controller('MetersController', ['$rootScope','$scope', '$http',
 		$rootScope.active = 'meters';
 
 		$scope.measurements = [];
+
 		$scope.connecting = true;
 
 		function read_sensor() {
-			console.log('attempting to get measurement');
-			var url = 'http://' + $rootScope.smartbottle.address + '/measurements';
-			$http({method: 'GET', url: url}).
+			$scope.status = 'attempting to get measurement';
+			var url = 'http://' + $rootScope.smartbottle.address + '/measurement';
+			return $http({method: 'GET', url: url}).
 				success(function(data, status, headers, config, statusText) {
 					$scope.connecting = false;
-					$scope.error = undefined;
-					$scope.status = undefined;
-					console.log(data);
+
+					var m = [];
+					for (var key in data['probe.data']) {
+						var o = {
+							key: key,
+							value: data['probe.data'][key]
+						};
+
+						m.push(o);
+					};
+
+					$scope.measurements = m;
+
+					setTimeout(read_sensor, 2000);
 				}).
 				error(function(data, status, headers, config, statusText) {
 					$scope.connecting = true;
-					$scope.error = data
-					$scope.status = statusText;
 				});
 
-		}
-
-		setInterval(read_sensor, 3000);
+		};
 
 		$scope.saveMeasurements = function() {
-			console.log('saving ', $rootScope.smartbottle, $scope.measurements);
+			read_sensor();
 		} ;
 	}
 ]);
