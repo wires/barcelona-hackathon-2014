@@ -16,20 +16,23 @@
         <link rel="stylesheet" type="text/css" href="css/application.css"/>
     </head>
     <body>
-        <div id='header-bar'>
-          <h1 ng-class="{'unfolded': showingMenu}"
-              ng-click="toggleMenu()">Smartbottle</h1>
-          <nav>
-            <ul>
-              <li>
-                  <a ng-class="{'active': active == 'meters'}" href="/#/meters">Meters</a>
-              </li>
-              <li>
-                  <a ng-class="{'active': active == 'settings'}" href="/#/settings">Settings</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <nav ng-class="{'unfolded': showingMenu}" >
+          <h1 ng-click="toggleMenu()">
+            <span ng-show="showingMenu">Smartbottle</span>
+          </h1>
+          <ul>
+            <li>
+                <a ng-show="showingMenu" ng-class="{'active': active == 'meters'}" ng-click="toggleMenu()" href="/#/meters">
+                  Meters
+                </a>
+            </li>
+            <li>
+                <a ng-show="showingMenu" ng-class="{'active': active == 'settings'}" ng-click="toggleMenu()" href="/#/settings">
+                  Settings
+                </a>
+            </li>
+          </ul>
+        </nav>
         <div ng-view></div>
     </body>
 </html>
