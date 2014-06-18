@@ -19,8 +19,8 @@
         <div id='header-bar'>
           <h1>Smartbottle</h1>
           <nav>
-            <a href="/#/meters">Meters</a>
-            <a href="/#/settings">Settings</a>
+            <a ng-class="active: selected=='meters'" href="/#/meters">Meters</a>
+            <a ng-class="active: selected=='settings'" href="/#/settings">Settings</a>
           </nav>
         </div>
         <div ng-view></div>

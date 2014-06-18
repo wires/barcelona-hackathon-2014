@@ -5,23 +5,11 @@
   </div>
 
   <ul id='measures'>
-    <li>
-      <span class='value'>12pH</span>
-      <span class='key'>pH</span>
-    </li>
-    <li>
-      <span class='value'>1200mV</span>
-      <span class='key'>ORP</span>
-    </li>
-    <li>
-      <span class='value'>100,000μS/cm</span>
-      <span class='key'>Conductivity</span>
-    </li>
-    <li>
-      <span class='value'>15mg/L</span>
-      <span class='key'>DO</span>
+    <li ng-repeat='measurement in measurements'>
+      <span class='value'>{{measurement.value}}</span>
+      <span class='key'>{{measurement.key}}</span>
     </li>
   </ul>
 
-  <a href="#" id="store-button">Save</a>
+  <a ng-click="saveMeasurement()" id="store-button">Save</a>
 </section>
