@@ -137,8 +137,8 @@ body {
 
 /* line 1, ../../sass/application/_layout.sass */
 #header-bar {
-  height: 30px;
-  line-height: 30px;
+  height: 45px;
+  line-height: 45px;
   font-weight: bold;
   border-bottom: 1px #cccccc solid;
   background: url('/images/bottle_black.svg');
@@ -156,30 +156,33 @@ body {
   vertical-align: top;
 }
 
-/* line 3, ../../sass/sections/_meters.sass */
-section#meters {
-  width: 80%;
-  margin: 0 10%;
-}
-/* line 6, ../../sass/sections/_meters.sass */
+/* line 5, ../../sass/sections/_meters.sass */
 section#meters h3 {
   text-align: center;
   margin-bottom: 30px;
 }
-/* line 11, ../../sass/sections/_meters.sass */
+/* line 9, ../../sass/sections/_meters.sass */
+section#meters #measures {
+  width: 80%;
+  margin: 0 10%;
+}
+/* line 12, ../../sass/sections/_meters.sass */
 section#meters #measures li {
   vertical-align: top;
   display: inline-block;
   width: 39%;
-  margin: 0 5%;
+  margin: 0 5% 0 4%;
+  margin-bottom: 40px;
   text-align: center;
 }
-/* line 17, ../../sass/sections/_meters.sass */
+/* line 19, ../../sass/sections/_meters.sass */
 section#meters #measures li span {
   margin: auto;
 }
-/* line 19, ../../sass/sections/_meters.sass */
+/* line 21, ../../sass/sections/_meters.sass */
 section#meters #measures li .value {
+  font-weight: bold;
+  color: white;
   line-height: 120px;
   display: block;
   height: 120px;
@@ -191,19 +194,33 @@ section#meters #measures li .value {
   -o-border-radius: 120px;
   border-radius: 120px;
 }
-@media only screen and (max-width: 40em) {
-  /* line 11, ../../sass/sections/_meters.sass */
-  section#meters #measures li {
-    width: 80%;
-    margin: 0 10%;
-  }
+/* line 30, ../../sass/sections/_meters.sass */
+section#meters #measures li .key {
+  line-height: 30px;
 }
-/* line 31, ../../sass/sections/_meters.sass */
+/* line 33, ../../sass/sections/_meters.sass */
 section#meters #store-button {
+  position: fixed;
+  bottom: 0;
   text-align: center;
   background: #cccccc;
-  padding: 4px 8px;
+  padding: 16px 8px;
   display: block;
   width: 50px;
   margin: auto;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+@media only screen and (max-width: 40em) {
+  /* line 33, ../../sass/sections/_meters.sass */
+  section#meters #store-button {
+    text-decoration: none;
+    color: white;
+    margin: 0;
+    width: 100%;
+  }
+  /* line 49, ../../sass/sections/_meters.sass */
+  section#meters #store-button:hover {
+    background: #aaaaaa;
+  }
 }
