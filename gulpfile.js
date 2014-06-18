@@ -21,7 +21,7 @@ gulp.task('sass', function(){
 gulp.task('javascript', function(){
 	return gulp.src(javascripts)
 		.pipe($.concat())
-		.pipe(gulp.dest(build_dir + 'application.css'));
+		.pipe(gulp.dest(build_dir + 'application.js'));
 })
 
 gulp.task('develop', function () {
