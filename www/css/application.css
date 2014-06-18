@@ -133,6 +133,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   font-family: Lato;
   font-weight: 100;
+  color: #888888;
 }
 
 /* line 1, ../../sass/application/_layout.sass */
@@ -147,13 +148,13 @@ body {
   background-size: 30px 20px;
   padding: 0 30px;
   margin-bottom: 30px;
+  border-bottom: 1px solid white;
 }
-/* line 13, ../../sass/application/_layout.sass */
+/* line 14, ../../sass/application/_layout.sass */
 #header-bar h1 {
   color: white;
   display: inline-block;
   padding-right: 15px;
-  border-right: 1px solid #8ce7ed;
 }
 /* line 20, ../../sass/application/_layout.sass */
 #header-bar nav {
@@ -161,24 +162,36 @@ body {
   display: inline-block;
   vertical-align: top;
 }
+/* line 24, ../../sass/application/_layout.sass */
+#header-bar nav a {
+  text-decoration: none;
+  color: white;
+  padding: 30px 20px;
+}
+/* line 28, ../../sass/application/_layout.sass */
+#header-bar nav a:hover, #header-bar nav a.active {
+  background: white;
+  color: #8ce7ed;
+}
 
 /* line 1, ../../sass/application/_headers.sass */
 h3 {
+  margin-bottom: 30px;
   font-size: 32px;
   color: #8ce7ed;
 }
 
-/* line 5, ../../sass/sections/_meters.sass */
+/* line 4, ../../sass/sections/_meters.sass */
 section#meters h3 {
   text-align: center;
   margin-bottom: 30px;
 }
-/* line 9, ../../sass/sections/_meters.sass */
+/* line 8, ../../sass/sections/_meters.sass */
 section#meters #measures {
   width: 80%;
   margin: 0 10%;
 }
-/* line 12, ../../sass/sections/_meters.sass */
+/* line 11, ../../sass/sections/_meters.sass */
 section#meters #measures li {
   vertical-align: top;
   display: inline-block;
@@ -186,11 +199,11 @@ section#meters #measures li {
   width: 15%;
   margin: 0 5% 0 4%;
 }
-/* line 18, ../../sass/sections/_meters.sass */
+/* line 17, ../../sass/sections/_meters.sass */
 section#meters #measures li span {
   margin: auto;
 }
-/* line 20, ../../sass/sections/_meters.sass */
+/* line 19, ../../sass/sections/_meters.sass */
 section#meters #measures li .value {
   font-weight: bold;
   color: white;
@@ -205,23 +218,23 @@ section#meters #measures li .value {
   -o-border-radius: 120px;
   border-radius: 120px;
 }
-/* line 29, ../../sass/sections/_meters.sass */
+/* line 28, ../../sass/sections/_meters.sass */
 section#meters #measures li .key {
   line-height: 30px;
 }
 @media only screen and (max-width: 40em) {
-  /* line 12, ../../sass/sections/_meters.sass */
+  /* line 11, ../../sass/sections/_meters.sass */
   section#meters #measures li {
     width: 39%;
     margin: 0 5% 0 4%;
     margin-bottom: 40px;
   }
 }
-/* line 36, ../../sass/sections/_meters.sass */
+/* line 35, ../../sass/sections/_meters.sass */
 section#meters #store-button {
   text-align: center;
   background: #8ce7ed;
-  padding: 16px 8px;
+  padding: 16px 32px;
   display: block;
   width: 50px;
   margin: auto;
@@ -231,13 +244,65 @@ section#meters #store-button {
   color: white;
   margin-top: 30px;
 }
-/* line 48, ../../sass/sections/_meters.sass */
+/* line 13, ../../sass/mixins/_button.sass */
 section#meters #store-button:hover {
   background: #4ad9e3;
 }
 @media only screen and (max-width: 40em) {
-  /* line 36, ../../sass/sections/_meters.sass */
+  /* line 35, ../../sass/sections/_meters.sass */
   section#meters #store-button {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* line 1, ../../sass/sections/_settings.sass */
+section#settings {
+  text-align: center;
+}
+/* line 2, ../../sass/sections/_settings.sass */
+section#settings #ip-form {
+  width: 80%;
+  margin: 0 10%;
+}
+/* line 7, ../../sass/sections/_settings.sass */
+section#settings input {
+  width: 100%;
+  outline: none;
+  border: 0;
+  text-align: center;
+  font-size: 32px;
+  margin: 15px 0;
+  color: #8ce7ed;
+  border-bottom: 1px solid #cccccc;
+}
+/* line 16, ../../sass/sections/_settings.sass */
+section#settings input:focus {
+  border-bottom: 1px solid #8ce7ed;
+}
+/* line 19, ../../sass/sections/_settings.sass */
+section#settings #store-button {
+  text-align: center;
+  background: #8ce7ed;
+  padding: 16px 32px;
+  display: block;
+  width: 50px;
+  margin: auto;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  margin-top: 30px;
+}
+/* line 13, ../../sass/mixins/_button.sass */
+section#settings #store-button:hover {
+  background: #4ad9e3;
+}
+@media only screen and (max-width: 40em) {
+  /* line 19, ../../sass/sections/_settings.sass */
+  section#settings #store-button {
     position: fixed;
     bottom: 0;
     width: 100%;

@@ -9,15 +9,22 @@
   background-size: 30px 20px
   padding: 0 30px
   margin-bottom: 30px
+  border-bottom: 1px solid #fff
 
   h1
     color: #fff
     display: inline-block
     padding-right: 15px
-    border-right: 1px solid $main-color
 
 
   nav
     margin-left: 30px
     display: inline-block
     vertical-align: top
+    a
+      text-decoration: none
+      color: white
+      padding: 30px 20px
+      &:hover, &.active
+        background: #fff
+        color: $main-color

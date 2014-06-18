@@ -1,0 +1,19 @@
+@mixin button
+  text-align: center
+  background: $main-color
+  padding: 16px 32px
+  display: block
+  width: 50px
+  margin: auto
+  text-transform: uppercase
+  font-weight: bold
+  text-decoration: none
+  color: white
+  margin-top: 30px
+  &:hover
+    background: darken($main-color, 15)
+  +breakpoint
+    position: fixed
+    bottom: 0
+    width: 100%
+    margin: 0
