@@ -5,6 +5,13 @@ demoApp.run(function($rootScope){
 	$rootScope.smartbottle = {
 		address: '127.0.0.1'
 	};
+	$rootScope.active = 'meters'
+	$rootScope.showingMenu = false;
+
+	$rootScope.toggleMenu = function() {
+		$rootScope.showingMenu = !$rootScope.showingMenu;
+	}
+
 });
 
 demoApp.config(function($routeProvider){
