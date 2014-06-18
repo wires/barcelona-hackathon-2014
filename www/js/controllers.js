@@ -34,11 +34,13 @@ controllers.controller('MetersController', ['$rootScope','$scope', '$http',
 		$scope.connecting = true;
 
 		function read_sensor() {
-			$scope.status = 'attempting to get measurement';
+			$scope.status = 'Attempting to get measurement';
 			var url = 'http://' + $rootScope.smartbottle.address + '/measurement';
 			return $http({method: 'GET', url: url}).
 				success(function(data, status, headers, config, statusText) {
 					$scope.connecting = false;
+
+					$scope.status = 'Retrieved measurement';
 
 					var m = [];
 					for (var key in data['probe.data']) {
