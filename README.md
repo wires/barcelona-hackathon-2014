@@ -1,3 +1,11 @@
+# About
+
+This is some incomplete code for a hack I did together with my (former)
+colleagues from `30MHz` in Barcelona. We build a water quality measuring
+bottle, tried to use `pH`, `DSO`, and some other sensors from [Atlas
+Scientific](http://www.atlas-scientific.com). Sadly, customs stopped
+our kit from arriving in time, buuuhuu. :-(
+
 ## Setup
 
 	npm i
